@@ -1,9 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
-body{
-    background-color: black;
-}
-p{
-    color: black;
- font-size: 25px;
- font-family: 'Times New Roman', Times, serif;
-}
+/* Estilo de la fuente */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  h1, h2 {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+    transition: border-bottom 0.2s ease;
+  }
+  
+  a:hover {
+    border-bottom: 2px solid #999999;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 767px) {
+    /* Fuente y tamaños */
+    body {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    /* Margenes y padding */
+    h1,
+    h2,
+    p {
+      margin: 10px;
+    }
+  
+    /* Ancho máximo */
+    .container {
+      max-width: 100%;
+    }
+  }
+  

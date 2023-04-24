@@ -1,6 +1,25 @@
-h1{
-    color: white;
+.carrusel {
+    margin-top: 15vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    display: flex;
+    height: 280px;
+
 }
-p{
-color: white;
+
+.imagenes-carrusel {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition:all .3s ease-in-out;
+    
+}
+
+.imagenes-carrusel:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%) ;
+    width: 750px;
 }
