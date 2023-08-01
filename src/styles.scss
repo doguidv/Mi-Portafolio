@@ -1,77 +1,125 @@
-/* Estilo de la fuente */
+html {
+  scroll-behavior: smooth;
+}
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #ADD8E6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  font-style: oblique;
+}
 
-  }
-  
-  h1, h2 {
-    font-weight: bold;
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  // background-image: url("../src/assets/Gestion_de_datos.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.8;
+}
+header {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  header {
     text-align: center;
   }
-  
+
   h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
     font-size: 24px;
-    margin-bottom: 10px;
   }
-  
-  p {
+
+  h2 {
+    font-size: 16px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media screen and (min-width: 601px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  article {
+    flex-basis: calc(50% - 20px);
     margin-bottom: 20px;
   }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  h4 {
+    font-size: 18px;
+    margin-top: 0;
   }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  a {
-    color: #000000;
-    text-decoration: none;
-    border-bottom: 2px solid #000000;
-    transition: border-bottom 0.2s ease;
-  }
-  
-  a:hover {
-    border-bottom: 2px solid #999999;
-  }
-  
-  /* Estilos para dispositivos móviles */
-  @media (max-width: 767px) {
-    /* Fuente y tamaños */
-    body {
-      font-size: 14px;
-    }
-  
-    h1 {
-      font-size: 30px;
-    }
-  
-    h2 {
-      font-size: 22px;
-    }
-  
-    /* Margenes y padding */
-    h1,
-    h2,
-    p {
-      margin: 10px;
-    }
-  
-    /* Ancho máximo */
-    .container {
-      max-width: 100%;
-    }
-  }
-  
+}

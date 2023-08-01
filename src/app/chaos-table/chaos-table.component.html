@@ -1,0 +1,22 @@
+<table class="table table-success table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Clave Hasheada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of chaosData">
+      <td class="table-warning">{{ item.id }}</td>
+      <td class="table-warning">{{ item.name }}</td>
+      <td class="table-warning">{{ item.age }}</td>
+      <td>
+        <div class="hash-container">
+          {{ item.hash }}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

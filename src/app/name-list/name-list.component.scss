@@ -1,0 +1,92 @@
+div {
+  margin-bottom: 4%;
+}
+.chaotic-heading {
+  font-size: 36px;
+  text-align: center;
+  animation: chaoticHeadingAnimation 2s infinite alternate;
+}
+
+.chaotic-heading span {
+  display: inline-block;
+}
+
+@keyframes chaoticHeadingAnimation {
+  0% {
+    transform: rotateZ(0) scale(1);
+    color: #ff0000;
+  }
+  100% {
+    transform: rotateZ(5deg) scale(1.1);
+    color: #00ff00;
+  }
+}
+.chaotic-paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chaotic-paragraph {
+  font-size: 18px;
+  margin: 5px 0;
+  animation: chaoticAnimation 2s infinite alternate;
+}
+
+@keyframes chaoticAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px) rotateZ(5deg) translateX(5px);
+  }
+}
+
+.name-list {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.5s ease; /* Agregamos una transición de 0.5 segundos al formulario */
+
+  &.loading {
+    transform: rotate(
+      360deg
+    ); /* Giramos el formulario 360 grados cuando está cargando */
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .add-name {
+    margin-top: 20px;
+
+    input {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

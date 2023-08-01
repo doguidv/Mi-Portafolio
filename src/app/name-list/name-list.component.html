@@ -1,0 +1,42 @@
+<h1 class="chaotic-heading">
+  ¡Bienvenido al <span>Caos</span> de <span>Datos</span>!
+</h1>
+
+<div class="chaotic-paragraphs">
+  <p class="chaotic-paragraph">¡El caos está aquí!</p>
+  <p class="chaotic-paragraph">No hay reglas.</p>
+  <p class="chaotic-paragraph">Todo es aleatorio.</p>
+  <p class="chaotic-paragraph">¡Bienvenido al desorden!</p>
+</div>
+<div class="name-list" [class.loading]="isLoading">
+  <h2>Lista de Nombres</h2>
+
+  <div class="add-name">
+    <input type="text" [(ngModel)]="newName" placeholder="Ingrese un nombre" />
+    <div class="form-group">
+      <label for="ageInput">Edad:</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="newAge"
+        id="ageInput"
+        placeholder="Ingrese la edad"
+      />
+    </div>
+    <div class="form-group">
+      <label for="keyInput">Clave:</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="newKey"
+        id="keyInput"
+        placeholder="Ingrese la clave"
+      />
+    </div>
+    <button (click)="addName()">Agregar Nombre</button>
+  </div>
+</div>
+
+<section>
+  <app-chaos-table></app-chaos-table>
+</section>
